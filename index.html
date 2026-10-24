@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sáng Yoga — Yoga ngoài trời buổi sáng</title>
+<meta name="description" content="Sáng Yoga — lớp yoga ngoài trời buổi sáng, 5:30 – 6:30, Thứ 2 đến Thứ 7. Buổi tập thử đầu tiên miễn phí.">
+<style>
+  :root{
+    --bg:#FDFEF9; --bg-alt:#EAF5EC; --primary:#2E7D4F; --accent:#4CAF7A;
+    --text:#222; --text-sub:#555; --border:#C8E6D0;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Be Vietnam Pro",sans-serif;
+    background:var(--bg);color:var(--text);font-size:18px;line-height:1.6}
+  a{color:var(--primary)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  /* Header */
+  header{position:sticky;top:0;background:var(--bg);border-bottom:2px solid var(--border);z-index:10}
+  .head{display:flex;align-items:center;gap:16px;padding:12px 0;flex-wrap:wrap}
+  .logo{font-size:26px;font-weight:800;color:var(--primary);line-height:1.2}
+  .logo small{display:block;font-size:15px;font-weight:400;color:var(--text-sub)}
+  nav{display:flex;gap:16px;flex-wrap:wrap;margin-left:auto}
+  nav a{text-decoration:none;font-size:17px;font-weight:600}
+  .btn{display:inline-block;background:var(--primary);color:#fff;text-decoration:none;
+    font-size:18px;font-weight:700;min-height:52px;line-height:52px;padding:0 24px;
+    border-radius:12px;border:0;cursor:pointer;text-align:center}
+  .btn.secondary{background:#fff;color:var(--primary);border:2px solid var(--primary)}
+  /* Sections */
+  section{padding:64px 0}
+  section.alt{background:var(--bg-alt)}
+  h1{font-size:40px;line-height:1.25;color:var(--primary);margin:0 0 16px}
+  h2{font-size:28px;color:var(--primary);margin:0 0 24px}
+  h3{font-size:22px;margin:0 0 8px}
+  p{margin:0 0 16px}
+  .hero-time{font-size:22px;font-weight:800;color:var(--primary);margin:24px 0}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+  .hero-img{width:100%;height:280px;margin-top:32px;border-radius:16px;border:2px solid var(--border);
+    background:linear-gradient(135deg,#EAF5EC,#C8E6D0);display:flex;align-items:center;justify-content:center;
+    font-size:20px;color:var(--primary);text-align:center;padding:24px}
+  /* Schedule table */
+  table{width:100%;border-collapse:collapse;font-size:18px}
+  th,td{border:1px solid var(--border);padding:14px 16px;text-align:left}
+  th{background:var(--bg-alt);color:var(--primary)}
+  td.time,td.price{font-size:22px;font-weight:800;color:var(--primary)}
+  /* Cards */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .card{background:#fff;border:2px solid var(--border);border-radius:16px;padding:24px}
+  .card.highlight{border-color:var(--primary);box-shadow:0 0 0 2px var(--primary) inset}
+  .badge{display:inline-block;background:var(--accent);color:#fff;font-weight:700;
+    font-size:16px;padding:4px 14px;border-radius:20px;margin-bottom:12px}
+  .avatar{width:96px;height:96px;border-radius:50%;background:var(--bg-alt);border:2px solid var(--border);
+    display:flex;align-items:center;justify-content:center;font-size:48px;margin-bottom:16px}
+  .placeholder{color:var(--text-sub);font-style:italic}
+  /* Form */
+  form{max-width:640px}
+  label{display:block;font-size:18px;font-weight:700;margin:20px 0 8px}
+  input,select,textarea{width:100%;font-size:18px;min-height:52px;padding:12px 16px;
+    border:2px solid var(--border);border-radius:12px;font-family:inherit;background:#fff}
+  textarea{min-height:110px;resize:vertical}
+  .note{font-size:15px;color:var(--text-sub)}
+  .success{display:none;background:var(--bg-alt);border:2px solid var(--primary);border-radius:16px;
+    padding:24px;margin-top:24px;font-size:19px}
+  .success.show{display:block}
+  .error{color:#B00020;font-size:16px;margin-top:6px}
+  /* FAQ */
+  details{background:#fff;border:2px solid var(--border);border-radius:12px;padding:18px 22px;margin-bottom:16px}
+  summary{font-size:20px;font-weight:700;color:var(--primary);cursor:pointer}
+  details p{margin:12px 0 0}
+  footer{background:var(--bg-alt);border-top:2px solid var(--border);padding:48px 0;text-align:center}
+  footer p{font-size:17px}
+  @media (max-width:700px){
+    body{font-size:17px}
+    h1{font-size:32px}
+    h2{font-size:24px}
+    section{padding:48px 0}
+    .grid{grid-template-columns:1fr}
+    .hero-img{height:200px}
+    td.time,td.price{font-size:20px}
+    nav{margin-left:0}
+    .head .btn{width:100%}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap head">
+    <div class="logo">Sáng Yoga<small>Yoga ngoài trời buổi sáng</small></div>
+    <nav>
+      <a href="#lich-hoc">Lịch học</a>
+      <a href="#huan-luyen-vien">Huấn luyện viên</a>
+      <a href="#hoc-phi">Học phí</a>
+      <a href="#dang-ky">Đăng ký tập thử</a>
+      <a href="#hoi-dap">Hỏi đáp</a>
+    </nav>
+    <a class="btn" href="#dang-ky">Đăng ký tập thử miễn phí</a>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section>
+    <div class="wrap">
+      <h1>Sáng Yoga — Yoga ngoài trời buổi sáng</h1>
+      <p>Tập yoga ngoài trời vào buổi sáng sớm, nhẹ nhàng và thư giãn. Phù hợp với người lớn tuổi và người mới bắt đầu, chưa từng tập yoga cũng tham gia được.</p>
+      <p class="hero-time">🕠 5:30 – 6:30 sáng · Thứ 2 đến Thứ 7</p>
+      <div class="hero-cta">
+        <a class="btn" href="#dang-ky">Đăng ký tập thử miễn phí</a>
+        <a class="btn secondary" href="#lich-hoc">Xem lịch học và học phí</a>
+      </div>
+      <div class="hero-img" role="img" aria-label="Ảnh minh họa lớp yoga ngoài trời buổi sáng">🌿 Ảnh minh họa: lớp yoga ngoài trời buổi sáng</div>
+    </div>
+  </section>
+
+  <!-- Lịch học -->
+  <section class="alt" id="lich-hoc">
+    <div class="wrap">
+      <h2>Lịch học</h2>
+      <table>
+        <tr><th>Ngày</th><th>Giờ</th><th>Ghi chú</th></tr>
+        <tr><td>Thứ 2 – Thứ 7</td><td class="time">5:30 – 6:30 sáng</td><td>Lớp ngoài trời, tập chung</td></tr>
+        <tr><td>Chủ nhật</td><td>Nghỉ</td><td>—</td></tr>
+      </table>
+      <p class="note" style="margin-top:16px">Vui lòng đến sớm 10 phút để khởi động. Nếu mưa to hoặc thời tiết xấu, lớp sẽ thông báo dời hoặc hoãn buổi tập.</p>
+    </div>
+  </section>
+
+  <!-- Huấn luyện viên -->
+  <section id="huan-luyen-vien">
+    <div class="wrap">
+      <h2>Huấn luyện viên</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="avatar" aria-hidden="true">🧘</div>
+          <h3 class="placeholder">Huấn luyện viên 1 — [Tên — chờ bổ sung]</h3>
+          <p class="placeholder">[Giới thiệu ngắn — chờ bổ sung]</p>
+        </article>
+        <article class="card">
+          <div class="avatar" aria-hidden="true">🧘</div>
+          <h3 class="placeholder">Huấn luyện viên 2 — [Tên — chờ bổ sung]</h3>
+          <p class="placeholder">[Giới thiệu ngắn — chờ bổ sung]</p>
+        </article>
+      </div>
+      <p class="note" style="margin-top:16px">Thông tin huấn luyện viên sẽ được bổ sung trước khi công bố chính thức.</p>
+    </div>
+  </section>
+
+  <!-- Học phí -->
+  <section class="alt" id="hoc-phi">
+    <div class="wrap">
+      <h2>Học phí</h2>
+      <div class="grid">
+        <article class="card highlight">
+          <span class="badge">Tiết kiệm nhất</span>
+          <h3>Theo tháng</h3>
+          <p class="price">Giá tháng: <span class="placeholder">[chờ bổ sung]</span></p>
+          <p>Tập tất cả các buổi Thứ 2 – Thứ 7 trong tháng.</p>
+        </article>
+        <article class="card">
+          <h3>Buổi lẻ</h3>
+          <p class="price">Giá 1 buổi: <span class="placeholder">[chờ bổ sung]</span></p>
+          <p>Trả theo từng buổi tập, dành cho người tập không đều.</p>
+        </article>
+      </div>
+      <p style="margin-top:24px"><strong>Buổi tập thử đầu tiên miễn phí.</strong></p>
+      <a class="btn" href="#dang-ky">Đăng ký tập thử miễn phí</a>
+    </div>
+  </section>
+
+  <!-- Form đăng ký -->
+  <section id="dang-ky">
+    <div class="wrap">
+      <h2>Đăng ký tập thử miễn phí</h2>
+      <p>Buổi đầu tiên miễn phí — không cần kinh nghiệm, chỉ cần đến đúng giờ.</p>
+      <form id="trial-form" novalidate>
+        <label for="fullname">Họ và tên *</label>
+        <input id="fullname" name="fullname" type="text" autocomplete="name" required>
+        <p class="error" id="err-name"></p>
+
+        <label for="phone">Số điện thoại *</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel" required
+               placeholder="Ví dụ: 0901234567">
+        <p class="error" id="err-phone"></p>
+
+        <label for="day">Ngày muốn tập thử</label>
+        <select id="day" name="day"></select>
+
+        <label for="health">Ghi chú sức khỏe / điều cần lưu ý (không bắt buộc)</label>
+        <textarea id="health" name="health" rows="3"
+          placeholder="Ví dụ: đau lưng, huyết áp — để huấn luyện viên chuẩn bị bài phù hợp"></textarea>
+
+        <button class="btn" type="submit" style="margin-top:28px;width:100%">Gửi đăng ký</button>
+      </form>
+      <div class="success" id="success" role="status">
+        <strong>Đã nhận đăng ký!</strong><br>
+        Sáng Yoga sẽ liên hệ xác nhận qua số điện thoại của bạn.<br>
+        Giờ tập: <strong>5:30 – 6:30 sáng</strong> — vui lòng đến sớm 10 phút để khởi động.
+      </div>
+      <p class="note" style="margin-top:16px">Thông tin đăng ký được lưu trên thiết bị này và sẽ được chuyển cho Sáng Yoga khi trang có kênh tiếp nhận chính thức.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="alt" id="hoi-dap">
+    <div class="wrap">
+      <h2>Câu hỏi thường gặp</h2>
+      <details>
+        <summary>Tôi chưa từng tập yoga, có theo kịp không?</summary>
+        <p>Có. Lớp Sáng Yoga dạy nhẹ nhàng, phù hợp người mới bắt đầu. Huấn luyện viên sẽ hướng dẫn từng động tác chậm rãi, bạn cứ tập theo sức của mình.</p>
+      </details>
+      <details>
+        <summary>Cần chuẩn bị gì khi đi tập?</summary>
+        <p>Mặc trang phục thoải mái, dễ vận động. Mang theo thảm tập (nếu có), một chai nước uống và một chiếc khăn nhỏ.</p>
+      </details>
+      <details>
+        <summary>Trời mưa thì lớp học thế nào?</summary>
+        <p>Nếu mưa to hoặc thời tiết xấu, lớp sẽ thông báo dời hoặc hoãn buổi tập. Bạn yên tâm, buổi tập thử vẫn được giữ lại cho buổi sau.</p>
+      </details>
+      <details>
+        <summary>Tập thử miễn phí là tập buổi nào, có cần đăng ký trước không?</summary>
+        <p>Buổi tập thử miễn phí là một buổi tập chung bất kỳ từ Thứ 2 đến Thứ 7, lúc 5:30 – 6:30 sáng. Bạn đăng ký trước qua form trên trang này để lớp chuẩn bị chỗ và liên hệ xác nhận.</p>
+      </details>
+      <details>
+        <summary>Học phí tháng và buổi lẻ khác nhau thế nào?</summary>
+        <p>Gói tháng cho bạn tập tất cả các buổi Thứ 2 – Thứ 7 trong tháng, tiết kiệm hơn. Gói buổi lẻ trả theo từng buổi, phù hợp nếu bạn chỉ tập không đều.</p>
+      </details>
+      <details>
+        <summary>Tôi có vấn đề sức khỏe (đau lưng, huyết áp...) thì tập được không?</summary>
+        <p>Được, lớp vốn dành cho người lớn tuổi và người mới. Bạn ghi chú tình trạng sức khỏe vào form đăng ký để huấn luyện viên chuẩn bị bài tập phù hợp và nhẹ nhàng hơn.</p>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong style="font-size:22px;color:var(--primary)">Sáng Yoga</strong></p>
+    <p>Giờ tập: 5:30 – 6:30 sáng, Thứ 2 đến Thứ 7</p>
+    <p class="placeholder">Liên hệ: số điện thoại / kênh liên hệ [chờ bổ sung]</p>
+    <p><a class="btn" href="#dang-ky">Đăng ký tập thử miễn phí</a></p>
+  </div>
+</footer>
+
+<script>
+  // Ngày tập thử: các ngày Thứ 2 – Thứ 7, mặc định buổi gần nhất.
+  (function () {
+    var select = document.getElementById('day');
+    var names = ['Chủ nhật','Thứ 2','Thứ 3','Thứ 4','Thứ 5','Thứ 6','Thứ 7'];
+    var d = new Date();
+    for (var i = 0; i < 14; i++) {
+      var day = new Date(d.getFullYear(), d.getMonth(), d.getDate() + i);
+      var dow = day.getDay();
+      if (dow === 0) continue; // Chủ nhật nghỉ
+      var opt = document.createElement('option');
+      var label = names[dow] + ', ' + day.getDate() + '/' + (day.getMonth() + 1) + '/' + day.getFullYear();
+      opt.value = label;
+      opt.textContent = label;
+      select.appendChild(opt);
+      if (select.options.length >= 6) break;
+    }
+  })();
+
+  // Ghi nhận đăng ký: kiểm tra hợp lệ rồi lưu vào localStorage của trình duyệt.
+  document.getElementById('trial-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = document.getElementById('fullname').value.trim();
+    var phone = document.getElementById('phone').value.trim();
+    var errName = document.getElementById('err-name');
+    var errPhone = document.getElementById('err-phone');
+    errName.textContent = ''; errPhone.textContent = '';
+    var ok = true;
+    if (!name) { errName.textContent = 'Vui lòng nhập họ và tên.'; ok = false; }
+    var digits = phone.replace(/[^0-9+]/g, '');
+    if (!/^\+?\d{9,12}$/.test(digits)) {
+      errPhone.textContent = 'Vui lòng nhập số điện thoại hợp lệ (9–12 chữ số).'; ok = false;
+    }
+    if (!ok) return;
+    var entry = {
+      name: name,
+      phone: phone,
+      day: document.getElementById('day').value,
+      health: document.getElementById('health').value.trim(),
+      createdAt: new Date().toISOString()
+    };
+    try {
+      var list = JSON.parse(localStorage.getItem('sang-yoga-registrations') || '[]');
+      list.push(entry);
+      localStorage.setItem('sang-yoga-registrations', JSON.stringify(list));
+    } catch (err) { /* thiết bị chặn lưu trữ: vẫn hiển thị xác nhận */ }
+    document.getElementById('trial-form').style.display = 'none';
+    document.getElementById('success').classList.add('show');
+    document.getElementById('success').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+</script>
+</body>
+</html>
