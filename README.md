@@ -1,21 +1,23 @@
-# Sáng Yoga — Trang giới thiệu lớp yoga ngoài trời buổi sáng
+# Sáng Yoga
 
-Triển khai từ thiết kế đã duyệt (TEC-44, xem `DESIGN.md`).
+Trang giới thiệu (landing page) **tĩnh** — sáng Yoga — lớp yoga ngoài trời buổi sáng, 5:30 – 6:30, Thứ 2 đến Thứ 7. Buổi tập thử đầu tiên miễn phí.. Trang được dựng bằng HTML, CSS và JavaScript thuần, không cần bước biên dịch.
 
-## Nội dung trang (`index.html`, trang tĩnh, không cần build)
+> Mọi tên, số điện thoại, địa chỉ và số liệu trên trang đều là **dữ liệu mẫu**. Giá hiển thị là **giá mẫu**. Biểu mẫu (nếu có) chỉ là giao diện minh họa: không gửi dữ liệu đi đâu và không có backend.
 
-- Header cố định + Hero: 5:30 – 6:30 sáng, Thứ 2 đến Thứ 7
-- Lịch học (bảng dọc, một dòng một buổi)
-- 2 huấn luyện viên (khung giữ chỗ — tên/tiểu sử chờ PO/BA bổ sung, không tự bịa)
-- Học phí: gói tháng (gắn nhãn "Tiết kiệm nhất") + buổi lẻ (mức giá chờ PO/BA bổ sung)
-- Form đăng ký tập thử miễn phí: họ tên, số điện thoại, ngày tập thử (Thứ 2 – Thứ 7, mặc định buổi gần nhất), ghi chú sức khỏe
-- FAQ: 6 câu hỏi cho người mới (dạng accordion)
-- Footer + nút đăng ký nhắc lại
+**Demo trực tuyến:** https://m-software-sang-yoga.genalpha.dev
+**Giấy phép:** [MIT](LICENSE) © M-Software
 
-## Form đăng ký hoạt động như thế nào
+## Cách xem
 
-Trang tĩnh chưa có máy chủ riêng nên đăng ký được **ghi nhận vào localStorage của trình duyệt** (`sang-yoga-registrations`) và hiển thị thông báo xác nhận kèm giờ tập. Khi có kênh tiếp nhận chính thức (máy chủ/form dịch vụ), chỉ cần thay khối lưu trữ trong hàm `submit` — giao diện và các trường giữ nguyên.
+Mở `index.html` bằng trình duyệt (nhấp đúp, không cần máy chủ), hoặc mở liên kết demo ở trên. Giữ nguyên các tệp cùng thư mục vì liên kết là tương đối.
 
-## Mở trang
+| Tệp | Nội dung |
+|---|---|
+| `README.md` | Tài liệu giới thiệu này |
+| `index.html` | Trang chính |
 
-Mở trực tiếp file `index.html`, hoặc chạy máy chủ tĩnh bất kỳ, ví dụ: `python3 -m http.server` trong thư mục này rồi mở `http://localhost:8000`.
+## English
+
+A **static** landing page for Sáng Yoga, built with plain HTML, CSS and JavaScript. All names, contact details and figures shown are sample data, displayed prices are sample prices, and any form is interface-only — nothing is submitted and there is no backend. Open `index.html` in a browser. Licensed under MIT.
+
+Contact: contact@genalpha.dev
