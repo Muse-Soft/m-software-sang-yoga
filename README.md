@@ -1,6 +1,6 @@
 # Sáng Yoga
 
-Trang giới thiệu (landing page) **tĩnh** — sáng Yoga — lớp yoga ngoài trời buổi sáng, 5:30 – 6:30, Thứ 2 đến Thứ 7. Buổi tập thử đầu tiên miễn phí.. Trang được dựng bằng HTML, CSS và JavaScript thuần, không cần bước biên dịch.
+Trang giới thiệu (landing page) **tĩnh** — sáng Yoga — lớp yoga ngoài trời buổi sáng, 5:30 – 6:30, Thứ 2 đến Thứ 7. Buổi tập thử đầu tiên miễn phí. Trang được dựng bằng HTML, CSS và JavaScript thuần, không cần bước biên dịch.
 
 > Mọi tên, số điện thoại, địa chỉ và số liệu trên trang đều là **dữ liệu mẫu**. Giá hiển thị là **giá mẫu**. Biểu mẫu (nếu có) chỉ là giao diện minh họa: không gửi dữ liệu đi đâu và không có backend.
 
@@ -13,6 +13,7 @@ Mở `index.html` bằng trình duyệt (nhấp đúp, không cần máy chủ),
 
 | Tệp | Nội dung |
 |---|---|
+| `LICENSE` | Giấy phép MIT |
 | `README.md` | Tài liệu giới thiệu này |
 | `index.html` | Trang chính |
 
